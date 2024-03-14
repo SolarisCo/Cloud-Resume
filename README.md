@@ -8,4 +8,5 @@ Tech Stack:
 •Terraform
 •DynamoDB
 •Github Actions
+•Python
 ![_57a64cf1-b585-4bc8-b1b0-39c6bfb1ba19](https://github.com/SolarisCo/Cloud-Resume/assets/131099267/67aec65a-e1d2-4a9a-9b2b-217bb1bd4d74)
