@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Solid State by HTML5 UP</title>
+		<title>Kahrese Stathum's Resume</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">Solid State</a></h1>
+						<h1><a href="index.html">Powered by AWS</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -31,24 +31,54 @@
 							<h2>Menu</h2>
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
+							<!----	<li><a href="generic.html">Projects</a></li> -->
+
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
 					</nav>
 
 				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><span class="icon fa-gem"></span></div>
-							<h2>This is Solid State</h2>
-							<p>Another free + fully responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
-						</div>
-					</section>
+				<section id="banner">
+					<div class="inner">
+					  <div class="logo"><span class="icon fa-gem"></span></div>
+					  <h2>Kahrese Stathum</h2>
+					  <p id="jobTitle">Network Engineer</p>
+					</div>
+				  </section>
+				  
+				  <script>
+					function updateJobTitleWithLoading() {
+    var jobTitleElement = document.getElementById('jobTitle');
 
+    function updateTitle(title, fadeInDuration, fadeOutDuration, delay) {
+      setTimeout(function() {
+        jobTitleElement.style.opacity = 0; // Faster fade-out
+
+        setTimeout(function() {
+          jobTitleElement.textContent = title;
+          jobTitleElement.style.opacity = 1; // Faster fade-in
+        }, fadeInDuration);
+      }, delay);
+    }
+
+    // Initial state
+    updateTitle('Devops Engineer', 800, 800, 0); // Display "Network Engineer" immediately with a noticeable fade-in
+
+    // Alternate between "Network Engineer" and "Cloud Engineer" with adjusted timings
+    setInterval(function() {
+      updateTitle('Network Engineer', 1000, 1000, 3200);   // Display "Cloud Engineer" after 3.2 seconds with a noticeable fade-in
+      updateTitle('Devops Engineer', 1000, 1000, 0);     // Display "Network Engineer" after 0.8 seconds with a noticeable fade-in
+    }, 5200); // Total cycle time (2.6 seconds for each title)
+  }
+
+  // Start the animation
+  updateJobTitleWithLoading();
+</script>
+
+</body>
+</html>
+				  
 				<!-- Wrapper -->
 					<section id="wrapper">
 
@@ -57,8 +87,15 @@
 								<div class="inner">
 									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Magna arcu feugiat</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
+										<h2 class="major">Skills</h2>
+										<p>
+											● Networking: TCP/IP, BGP, SSH, DNS, OSPF, EIGRP, STP, IPsec
+											● Vulnerability Management: Nmap, Metasploit, Wireshark, Palo Alto, Nessus, ACAS, Splunk, Trellix
+											● Virtualization and Containerization: VMWare vSphere, VMware ESXi, AWS, Docker
+											● Coding Languages: Python, SQL, Hashicorp HCL
+											● Operating Systems and Tools: Windows, Linux
+											● Infastructure as Code: Terraform
+										</p>
 										<a href="#" class="special">Learn more</a>
 									</div>
 								</div>
@@ -69,8 +106,12 @@
 								<div class="inner">
 									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Tempus adipiscing</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
+										<h2 class="major">Certifications</h2>
+										<p>
+											● Comptia Security + CE
+											● Cisco Certified Network Associate
+											● 3ds Max
+											● Microsoft Word </p>
 										<a href="#" class="special">Learn more</a>
 									</div>
 								</div>
@@ -81,8 +122,10 @@
 								<div class="inner">
 									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Nullam dignissim</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
+										<h2 class="major">Education</h2>
+										<p>BACHELOR OF SCIENCE (B.SC.) IN COMPUTER SCIENCE, 2023-PRESENT
+											Western Governors University
+											</p>
 										<a href="#" class="special">Learn more</a>
 									</div>
 								</div>
@@ -91,31 +134,55 @@
 						<!-- Four -->
 							<section id="four" class="wrapper alt style1">
 								<div class="inner">
-									<h2 class="major">Vitae phasellus</h2>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+									<h2 class="major">Professional experience</h2>
+									<p>The accumulation of my professional experience.</p>
 									<section class="features">
 										<article>
 											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<h3 class="major">Senior Network Engineer | SAIC</h3>
+											<p> • Identified and engineered solutions for inefficiencies in virtualization design and site reliability, improving
+												uptime by 29%.
+												• Deployed advanced Palo Alto firewall solutions, mitigating evolving cyber threats and achieving a 15%
+												reduction in security incidents.
+												• Managed diverse networking protocols, implementing robust security policies aligned with site reliability
+												engineering principles, resulting in a record high increase in network resilience for my department.
+												• Automated routine tasks using Python scripts, enhancing operational efficiency and reducing manual
+												workload.</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<h3 class="major">Network Administrator | Leidos</h3>
+											<p> • Implemented and enforced network security policies, ensuring compliance with industry standards and
+												enhancing overall network security posture.
+												• Leveraged Cisco CLI for network device management, applying OSI model principles for troubleshooting and
+												improving network efficiency by 18%
+												• Addressed complex network issues involving fiber optic cables, efficiently rerouting and patching
+												configurations, leading to a 25% reduction in downtime
+												• Implemented SIEM tools for log analysis, creating custom queries to detect and investigate security incidents.</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3 class="major">Ante fermentum</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<h3 class="major">Signal Support Specialist | Army National Guard</h3>
+											<p> • Managed local and wide area networks, troubleshooting complex issues, and configured network devices using
+												CLI commands, resulting in a 20% improvement in network reliability.
+												• Utilized advanced tools for comprehensive network analysis and vulnerability management, achieving a 15%
+												reduction in vulnerabilities.
+												• Implemented cybersecurity measures, including intrusion detection systems, contributing to a 25% reduction
+												in security incidents.
+												• Spearheaded the integration of SIEM solutions, enhancing real-time monitoring capabilities and improving
+												incident response times.</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3 class="major">Fusce consequat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="image"><img src="images/pic10.jpg" alt="" /></a>
+											<h3 class="major">Achievements</h3>
+											<p> • Promoted to Senior Network Engineer within months in recognition of outstanding performance, including the successful implementation of efficiency improvements and cost-effective solutions."
+												• Implemented cost-saving measures that resulted in a reduction in operation expenses, saving the company hundreds of thousands of dollars annually.
+												• Designed and developed an innovative resume hosted on AWS, showcasing proficiency in cloud technologies (AWS), HTML, CSS, JavaScript, Python, and Terraform.
+
+											</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 									</section>
@@ -131,7 +198,7 @@
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<p>If you'd like to reach out to me after reading my resume, feel free to put your information in the box, or contact me with the information below!</p>
 							<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
@@ -153,18 +220,16 @@
 							</form>
 							<ul class="contact">
 								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
+									United States
 								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+								<li class="icon solid fa-phone">(315) 876-4531</li>
+								<li class="icon solid fa-envelope"><a href="#">Stathum78@yahoo.com</a></li>
+								<li class="icon brands fa-github"><a href="#">https://github.com/SolarisCo</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">Currently unavailable</a></li>
+								<li class="icon brands fa-instagram"><a href="#">Currently Unavailable</a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Kahrese Stathum's resume. All rights reserved.</li><li><a href="https://github.com/SolarisCo">Thanks for reading!</a></li>
 							</ul>
 						</div>
 					</section>
