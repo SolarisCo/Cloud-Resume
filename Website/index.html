@@ -194,7 +194,15 @@
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
 							<p>If you'd like to reach out to me after reading my resume, feel free to put your information in the box, or contact me with the information below!</p>
-							<form method="post" action="index.php">
+							<form action="https://api.web3forms.com/submit" method="POST">
+
+								<!-- Replace with your Access Key -->
+								<input type="hidden" name="access_key" value="79b9dae3-4f3f-4faa-bd5e-6e26838c8315">
+								<!-- hCaptcha Spam Protection -->
+								<div class="h-captcha" data-captcha="true"></div>
+							</form>
+							<!-- Required for hCaptcha -->
+							<script src="https://web3forms.com/client/script.js" async defer></script>
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
