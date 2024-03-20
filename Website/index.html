@@ -210,9 +210,10 @@
 									<textarea name="message" id="message" rows="4" required></textarea>
 								</div>
 							</div>
-							<!-- hCaptcha Spam Protection -->
-							<script src="https://web3forms.com/client/script.js" async defer></script>
-							<div class="h-captcha" data-captcha="true" required></div>
+							<!-- gCaptcha Spam Protection -->
+							<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" sync defer>
+                            </script>
+							<div class="g-recaptcha" data-captcha="true" required></div>
 							<ul class="actions">
 								<li><input type="submit" value="Send Message" /></li>
 							</ul>
@@ -228,8 +229,8 @@
 									return false;
 								}
 						
-								// Check if hCaptcha is completed
-								if (!document.querySelector('.h-captcha > div').classList.contains('hcaptcha-success')) {
+								// Check if gCaptcha is completed
+								if (!document.querySelector('.g-recaptcha > div').classList.contains('g-recaptcha-success')) {
 									alert('Please complete the captcha.');
 									return false;
 								}
